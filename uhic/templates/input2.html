@@ -1,0 +1,147 @@
+{% load static %}
+
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>PERSONAL DETAILS</title>
+    <style type="text/css">
+        body{
+            background-image: url("{%static '8min.jpg' %}");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 1530px;
+        }
+        main{
+            position:fixed;
+            top:120px;
+            left:410px;
+            width:700px;
+            background-color:gainsboro;
+            align-items:center;
+            border-radius:5%;
+        }
+        .btn-holder {
+            justify-content: flex-end;
+            display: flex;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+        h4{
+            font-family: Impact;
+            font-size: 35px ;
+            color: black;
+        }
+        .center {
+              display: block;
+              margin-left: auto;
+              margin-right: auto;
+              width: 50%;
+        }
+        label{
+            font-family: Roboto;
+            display: block;
+            padding: 3px;
+        }
+        input {
+            padding: 10px;
+            display: inline-block;
+        }
+        fieldset{
+            width: 47%;
+            display: inline-block;
+            box-sizing: border-box;
+            border: 0;
+        }
+    </style>
+        <script>
+        function Addattachment()
+        {
+        var entityETC=10007; //entity code
+        var entityID =window.parent.Xrm.Page.data.entity.getId();//to read parent record ID
+        parent.Mscrm.RibbonActions.addFileToRecord(1, entityID)
+        }
+</script>
+</head>
+<body>
+<img src='{%static "uhicblack.png" %}' alt="logo" class="center" style="height: 175px;width: 80px">
+<h3><font size="25"><b>HEALTH DETAILS</b></font> </h3>
+<form action="/users" method="get">
+    <form style="margin:0;padding:0"></form>
+    <fieldset id="f1">
+        <div>
+            <label>Blood group</label>
+            <select name="blood_group" id="user[bloodgroup]">
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>\
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+            </select>
+        </div>
+
+        <div>
+            <label>Height(in cms)</label>
+            <input id="user_height" name="user[height]" size="4" type="number" />
+        </div>
+
+        <div>
+            <label>Weight(in kgs)</label>
+            <input id="user_weight" name="user[weight]" size="5" type="number" />
+        </div><br>
+        <div>
+            <legend>Eye power</legend>
+            <label for="right">Right eye:</label>
+            <input type="number" id="right" name="user[right]"><br><br>
+            <label for="left">Left eye:</label>
+            <input type="number" id="left" name="user[left]"><br><br>
+        </div>
+    </fieldset>
+    <fieldset id="f2">
+        <div>
+            <label>Are you diabetic?</label>
+            <input type="radio" name="yes" value="Yes">Yes
+            <input type="radio" name="no" value="No">No
+        </div>
+         <div>
+            <label>Blood pressure(Systolic,Diastolic)</label>
+            <select name="blood_pressure" id="user[bloodpressure]">
+                <option value="(<120,<80)">Healthy(<120,<80)</option>
+                <option value="(120-129,<80)">Elevated(120-129,<80)</option>
+                <option value="(130-139,80-89)">Hypertension stage-1((130-139,80-89)</option>
+                <option value="(>140,>90)">Hypertension stage-2(>140,>90)</option>\
+                <option value="(>180,>120)">Hypertension crisis(>180,>120)</option>
+            </select>
+        </div>
+
+        <div>
+            <label>Cholestrol</label>
+            <input type="radio" name="yes" value="Yes">Yes
+            <input type="radio" name="no" value="No">No
+        </div>
+
+        <div>
+            <label>Allergies</label>
+            Description : <br />
+         <textarea rows = "3" cols = "60" name = "description">
+         </textarea>
+        </div>
+
+        <div>
+            <label>Others</label>
+            Description : <br />
+         <textarea rows = "3" cols = "60" name = "description">
+         </textarea>
+        </div>
+    </fieldset>
+
+    </form>
+<div class="btn-holder">
+        <a href="{% url 'input3' %}"><input type="submit" value="NEXT"></a>
+
+</div>
+</body>
+</html>

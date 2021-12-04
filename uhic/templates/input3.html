@@ -1,0 +1,115 @@
+{% load static %}
+
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>DISEASE HISTORY</title>
+    <style>
+        body{
+            background-image: url("{%static '8min.jpg' %}");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 1530px;
+        }
+        main{
+            position: fixed;
+            top:120px;
+            left:410px;
+            width:700px;
+            background-color:gainsboro;
+            align-items:center;
+            border-radius:5%;
+        }
+        .btn-holder {
+            justify-content: flex-end;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+        h5{
+            font-family: Impact;
+            font-size: 35px ;
+            color: black;
+        }
+        .center {
+              display: block;
+              margin-left: auto;
+              margin-right: auto;
+              width: 50%;
+        }
+        label{
+            font-family: "Arial Black";
+            display: block;
+            padding: 3px;
+        }
+        input {
+            padding: 10px;
+        }
+        input[type="submit"]{
+            background-color: black;
+            color: white;
+            border-radius: 20px;
+            outline: white auto 5px;
+        }
+        button{
+            background-color: black;
+            color: white;
+            border-radius: 20px;
+            outline: white auto 5px;
+            padding: 10px;
+        }
+        fieldset{
+            width: 47%;
+            display: inline-block;
+            box-sizing: border-box;
+            border: 0;
+        }
+        .choose{
+            background-color: black;
+            color: white;
+            border-radius: 20px;
+            outline: white auto 5px;
+        }
+    </style>
+</head>
+<img src='{%static "uhicblack.png" %}' alt="logo" class="center"style="height: 200px" width="500px">
+<h5>DISEASE HISTORY</h5>
+<form action="disease" method="get">
+    <form style="margin:0;padding:0">
+        <fieldset id="f1">
+            <div>
+                <label>Disease</label>
+                <input id="disease_name" name="user[disease_name]" size="30" type="text" />
+            </div>
+            <div>
+                <label>Surgeries (if any)</label>
+                <input id="surgery_name" name="user[surgery_name]" size="30" type="text" />
+            </div>
+            <div>
+                <label>Diagnosed by</label>
+                <input id="diag_by" name="user[diagnosed]" size="30" type="text" />
+            </div>
+        </fieldset>
+        <fieldset id="f2">
+            <div>
+                <label>Time Period</label>
+                <input id="time_period_duration" name="user[time]" size="30" type="date" />
+            </div>
+            <div>
+                <label>Hospital</label>
+                <input id="hospital_name" name="user[hospital_name]" size="30" type="text" />
+            </div>
+            <div>
+                <label>Report(if any)</label>
+                <input class="choose" type="file" id="actual-btn" multiple/>
+                <br>Rename the file with report name before attaching
+            </div>
+        </fieldset>
+    </form>
+    <div class="btn-holder">
+
+            <a href="{% url 'finalhome' %}"><input type="submit" value="SUBMIT"></a>
+        </div>
+</form>
+</body>
+</html>
