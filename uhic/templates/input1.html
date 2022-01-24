@@ -85,6 +85,7 @@ label {
   display: block;
 }
 
+
 .btn {
   background-color: #04AA6D;
   padding: 12px;
@@ -94,6 +95,24 @@ label {
   font-size: 18px;
     width:50%;
     margin: 0 auto;
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+
 }
 
 .btn:hover {
@@ -123,6 +142,7 @@ span.guidelines{
 
 }
 </style>
+
     <script>
 <!--function myFunction1() {-->
 <!--  alert("Registered Successfully!");-->
@@ -131,6 +151,7 @@ function myFunction() {
   onclick(history.go(-2));
 }
 </script>
+
 </head>
 
 <body>
@@ -141,7 +162,11 @@ function myFunction() {
 <div class="row">
   <div class="col-75">
     <div class="container">
+
       <form action="input2">
+
+      <form action="/action_page.php">
+
 
         <div class="row">
           <div class="col-50"><br>
@@ -176,10 +201,17 @@ function myFunction() {
             <label>Address</label>
             <textarea style="border: 1px solid #ccc;" rows = "8" cols = "67" name = "description"></textarea>
           </div>
+
         </div><br>
             <center><button class="btn" type="submit">Next</button></center>
         </form>
             <center><button class="btn" type="submit" onclick="myFunction()">Back to Home</button></center>
+
+
+        </div><br>
+        <input type="submit" value="Next" class="btn">
+      </form>
+
     </div>
   </div>
   <div class="col-25">
@@ -191,5 +223,6 @@ function myFunction() {
     </div>
   </div>
 </div>
+
 </body>
 </html>
