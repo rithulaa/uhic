@@ -25,6 +25,8 @@ urlpatterns = [
     path('login/signup/', views.signup),
     path('login/input1/', views.input1),
     path('login/input1/input2/', views.input2),
+    path('login/input1/input2/input3/', views.input3),
+    path('login/input1/input2/input3/home/', views.home),
     path('register/', views.register),
     path('register/report/', views.report),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

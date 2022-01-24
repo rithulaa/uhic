@@ -27,7 +27,7 @@ def report(request):
 
 def input2(request):
     return render(request, "input2.html")
-#
-#
-# def input3(request):
-#     return render(request, "input3.html")
+
+
+def input3(request):
+    return render(request, "input3.html")
