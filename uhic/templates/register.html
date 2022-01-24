@@ -3,7 +3,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>UHIC REGISTER</title>
+
     <style>
          @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
@@ -13,12 +14,10 @@
      box-sizing: border-box;
      font-family: 'Poppins', sans-serif
  }
-        body{
-            background-image: url("{%static 'logbg6.jpeg' %}");
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: 1530px;
-        }
+
+ body {
+     background-color:pink
+ }
 
  .wrapper {
      max-width: 350px;
@@ -104,27 +103,16 @@
          padding: 40px 15px 15px 15px
      }
  }
-         .button{
-             background-color: whitesmoke;
-             border-color: whitesmoke;
-             alignment: left;
-             float: right;
-             cursor: pointer;
-         }
-         .link{ color: #039BE5}
     </style>
 </head>
 <body>
 <div class="wrapper">
     <div class="logo"> <img src='{%static "lg.png" %}' alt=""> </div>
     <div class="text-center mt-4 name"> UHIC </div>
-    <form action="input1" class="p-3 mt-3">
-        <div class="form-field d-flex align-items-center"> <span class="far fa-user"></span> <input type="text" name="userName"> </div>
-        <div class="form-field d-flex align-items-center"> <span class="fas fa-key"></span> <input type="password" name="password"> </div>
-    <button type="submit" class="btn mt-3">Login</button>
+    <form action="report" class="p-3 mt-3">
+        <div class="form-field d-flex align-items-center"> <span class="far fa-user"></span> <input type="text" name="uhic_no" id="uhic_no" placeholder="uhic"> </div>
+    <button type="submit" class="btn mt-3">VIEW REPORT</button>
     </form>
-    <form action="forget_pass"><button type="submit" class="button"><u class="link"> Forget password </u></button></form>
-    <form action="signup"><button type="submit" class="button"><u class="link"> Signup </u></button></form>
 </div>
 </body>
 </html>

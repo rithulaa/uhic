@@ -18,18 +18,13 @@ from django.urls import path
 from . import views
 from django.conf.urls.static import static
 from . import settings
-
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path(r'^admin/$', admin.site.urls),
     path('', views.home),
     path('login/', views.login),
-    path('login/signup/', views.signup, name="signup"),
-    path('login/signup/input1', views.input1, name="input1"),
-    path('login/signup/input1/input2', views.input2, name="input2"),
-    path('login/signup/input1/input2/input3', views.input2, name="input3"),
-    path('login/signup/input1/input2/input3/home', views.home, name="finalhome"),
-    path('login/input1', views.input1, name="input1"),
-    path('login/input1/input2', views.input2, name="input2"),
-    path('login/input1/input2/input3', views.input3, name="input3"),
-    path('login/input1/input2/input3/home', views.home, name="finalhome"),
+    path('login/signup/', views.signup),
+    path('login/input1/', views.input1),
+    path('login/input1/input2/', views.input2),
+    path('register/', views.register),
+    path('register/report/', views.report),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
