@@ -85,6 +85,17 @@ label {
   display: block;
 }
 
+
+.btn {
+  background-color: #04AA6D;
+  padding: 12px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 18px;
+    width:50%;
+    margin: 0 auto;
+
 .icon-container {
   margin-bottom: 20px;
   padding: 7px 0;
@@ -101,6 +112,7 @@ label {
   border-radius: 3px;
   cursor: pointer;
   font-size: 17px;
+
 }
 
 .btn:hover {
@@ -120,7 +132,6 @@ span.guidelines{
   color: grey;
 }
 
-
 @media (max-width: 800px) {
   .row {
     flex-direction: column-reverse;
@@ -131,7 +142,18 @@ span.guidelines{
 
 }
 </style>
+
+    <script>
+<!--function myFunction1() {-->
+<!--  alert("Registered Successfully!");-->
+<!--}-->
+function myFunction() {
+  onclick(history.go(-2));
+}
+</script>
+
 </head>
+
 <body>
 <img src="{% static 'lg.png' %}" alt="logo" style="height: 100px; width: 110px; position: absolute; top: 0px; right: 0px;">
 <br><br>
@@ -140,7 +162,11 @@ span.guidelines{
 <div class="row">
   <div class="col-75">
     <div class="container">
+
+      <form action="input2">
+
       <form action="/action_page.php">
+
 
         <div class="row">
           <div class="col-50"><br>
@@ -177,8 +203,15 @@ span.guidelines{
           </div>
 
         </div><br>
+            <center><button class="btn" type="submit">Next</button></center>
+        </form>
+            <center><button class="btn" type="submit" onclick="myFunction()">Back to Home</button></center>
+
+
+        </div><br>
         <input type="submit" value="Next" class="btn">
       </form>
+
     </div>
   </div>
   <div class="col-25">
