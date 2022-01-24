@@ -13,10 +13,12 @@
      box-sizing: border-box;
      font-family: 'Poppins', sans-serif
  }
-
- body {
-     background-color:pink
- }
+        body{
+            background-image: url("{%static 'logbg6.jpeg' %}");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 1530px;
+        }
 
  .wrapper {
      max-width: 350px;
@@ -102,18 +104,27 @@
          padding: 40px 15px 15px 15px
      }
  }
+         .button{
+             background-color: whitesmoke;
+             border-color: whitesmoke;
+             alignment: left;
+             float: right;
+             cursor: pointer;
+         }
+         .link{ color: #039BE5}
     </style>
 </head>
 <body>
 <div class="wrapper">
     <div class="logo"> <img src='{%static "lg.png" %}' alt=""> </div>
     <div class="text-center mt-4 name"> UHIC </div>
-    <form class="p-3 mt-3">
-        <div class="form-field d-flex align-items-center"> <span class="far fa-user"></span> <input type="text" name="userName" id="userName" placeholder="Username"> </div>
-        <div class="form-field d-flex align-items-center"> <span class="fas fa-key"></span> <input type="password" name="password" id="pwd" placeholder="Password"> </div>
-        <a href="{% url 'input1' %}"><button class="btn mt-3">Login</button></a>
+    <form action="input1" class="p-3 mt-3">
+        <div class="form-field d-flex align-items-center"> <span class="far fa-user"></span> <input type="text" name="userName"> </div>
+        <div class="form-field d-flex align-items-center"> <span class="fas fa-key"></span> <input type="password" name="password"> </div>
+    <button type="submit" class="btn mt-3">Login</button>
     </form>
-    <center><div class="text-center fs-6"> <a href="#">Forget password?</a> or <a href="{% url 'signup' %}">Sign up</a> </div></center>
+    <form action="forget_pass"><button type="submit" class="button"><u class="link"> Forget password </u></button></form>
+    <form action="signup"><button type="submit" class="button"><u class="link"> Signup </u></button></form>
 </div>
 </body>
 </html>
