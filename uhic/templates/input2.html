@@ -1,147 +1,258 @@
 {% load static %}
-
-<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>PERSONAL DETAILS</title>
-    <style type="text/css">
-        body{
-            background-image: url("{%static '8min.jpg' %}");
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: 1530px;
-        }
-        main{
-            position:fixed;
-            top:120px;
-            left:410px;
-            width:700px;
-            background-color:gainsboro;
-            align-items:center;
-            border-radius:5%;
-        }
-        .btn-holder {
-            justify-content: flex-end;
-            display: flex;
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-        }
-        h4{
-            font-family: Impact;
-            font-size: 35px ;
-            color: black;
-        }
-        .center {
-              display: block;
-              margin-left: auto;
-              margin-right: auto;
-              width: 50%;
-        }
-        label{
-            font-family: Roboto;
-            display: block;
-            padding: 3px;
-        }
-        input {
-            padding: 10px;
-            display: inline-block;
-        }
-        fieldset{
-            width: 47%;
-            display: inline-block;
-            box-sizing: border-box;
-            border: 0;
-        }
-    </style>
-        <script>
-        function Addattachment()
-        {
-        var entityETC=10007; //entity code
-        var entityID =window.parent.Xrm.Page.data.entity.getId();//to read parent record ID
-        parent.Mscrm.RibbonActions.addFileToRecord(1, entityID)
-        }
-</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  background-image: url("{%static '8min.jpg' %}");
+  font-family: Arial;
+  font-size: 17px;
+  padding: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+.col-100 {
+  -ms-flex: 100%; /* IE10 */
+  flex: 100%;
+}
+
+.col-25,
+.col-50,
+.col-75,
+.col-100{
+  padding: 0 16px;
+}
+
+.container {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+input[type=radio] {
+  margin-left: 15px;
+  margin-top: 10px;
+}
+input[type=number] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+input[type=tel] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+input[type=date] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+a {
+  color: #2196F3;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+
+span.guidelines{
+  float: right;
+  color: grey;
+}
+
+
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+
+}
+</style>
 </head>
 <body>
-<img src='{%static "uhicblack.png" %}' alt="logo" class="center" style="height: 175px;width: 80px">
-<h3><font size="25"><b>HEALTH DETAILS</b></font> </h3>
-<form action="/users" method="get">
-    <form style="margin:0;padding:0"></form>
-    <fieldset id="f1">
-        <div>
+
+<img src="{% static 'lg.png' %}" alt="logo" style="height: 100px; width: 110px; position: absolute; top: 0px; right: 0px;">
+<br><br>
+<h2>HEALTH DETAILS</h2>
+
+<div class="row">
+  <div class="col-100">
+    <div class="container">
+      <form action="/action_page.php">
+
+        <div class="row">
+          <div class="col-50"><br>
+          <div class="col-25">
             <label>Blood group</label>
-            <select name="blood_group" id="user[bloodgroup]">
+            <select style=" border: 1px solid #ccc;padding: 12px;width: 40%; margin-bottom: 5px; border-radius: 3px;" name="blood_group" id="user[bloodgroup]">
                 <option value="A+">A+</option>
                 <option value="A-">A-</option>
                 <option value="B+">B+</option>
-                <option value="B-">B-</option>\
+                <option value="B-">B-</option>
                 <option value="O+">O+</option>
                 <option value="O-">O-</option>
                 <option value="AB+">AB+</option>
                 <option value="AB-">AB-</option>
             </select>
-        </div>
+              </div>
+              <br>
 
-        <div>
-            <label>Height(in cms)</label>
-            <input id="user_height" name="user[height]" size="4" type="number" />
-        </div>
 
-        <div>
-            <label>Weight(in kgs)</label>
-            <input id="user_weight" name="user[weight]" size="5" type="number" />
-        </div><br>
-        <div>
-            <legend>Eye power</legend>
-            <label for="right">Right eye:</label>
-            <input type="number" id="right" name="user[right]"><br><br>
-            <label for="left">Left eye:</label>
-            <input type="number" id="left" name="user[left]"><br><br>
-        </div>
-    </fieldset>
-    <fieldset id="f2">
-        <div>
-            <label>Are you diabetic?</label>
-            <input type="radio" name="yes" value="Yes">Yes
-            <input type="radio" name="no" value="No">No
-        </div>
-         <div>
-            <label>Blood pressure(Systolic,Diastolic)</label>
-            <select name="blood_pressure" id="user[bloodpressure]">
+
+              <div class="col-25">
+              <br><label>Blood pressure(Systolic,Diastolic)</label>
+            <select style="border: 1px solid #ccc; padding: 12px;width: 40%; margin-bottom: 5px;  border-radius: 3px;" name="blood_pressure" id="user[bloodpressure]">
                 <option value="(<120,<80)">Healthy(<120,<80)</option>
                 <option value="(120-129,<80)">Elevated(120-129,<80)</option>
                 <option value="(130-139,80-89)">Hypertension stage-1((130-139,80-89)</option>
                 <option value="(>140,>90)">Hypertension stage-2(>140,>90)</option>\
                 <option value="(>180,>120)">Hypertension crisis(>180,>120)</option>
             </select>
-        </div>
+            </div>
+            <br>
+              <br>
+              <div class="col-50">
+              <div class="row">
+                  <div class="col-25">
+                  <label>Height(in cms)</label>
+                  <input id="user_height" name="user[height]" size="3" type="number" />
+                  </div>
+                  <div class="col-25">
+                  <label>Weight(in kgs)</label>
+                  <input id="user_weight" name="user[weight]" size="3" type="number" />
+                  </div>
+              </div>
+              </div>
 
-        <div>
-            <label>Cholestrol</label>
+              <div class="col-50">
+                <br>
+              <div>
+              <legend>Eye power</legend><br>
+              <div class="row">
+              <div class="col-25">
+              <label>Right eye:</label>
+              <input type="number" id="user[right]" name="right"> <br>
+              </div>
+              <div class="col-25">
+              <label>Left eye:</label>
+              <input type="number" id="user[left]" name="left"><br><br>
+              </div>
+              </div>
+              </div>
+            </div>
+          </div>
+
+
+          <br>
+            <div class="col-50"><br>
+            <div>
+            <label style="margin-left:15px" >Are you diabetic?</label>
             <input type="radio" name="yes" value="Yes">Yes
             <input type="radio" name="no" value="No">No
-        </div>
+            </div>
 
-        <div>
+            <br>
+            <div>
+            <label  style="margin-left:15px; margin-top:40px">Cholestrol</label>
+            <input type="radio" name="yes" value="Yes">Yes
+            <input type="radio" name="no" value="No">No
+            </div>
+
+            <br>
+            <div class="col-25"><br>
             <label>Allergies</label>
             Description : <br />
-         <textarea rows = "3" cols = "60" name = "description">
-         </textarea>
-        </div>
-
-        <div>
+            <textarea style="border: 1px solid #ccc;" rows = "3" cols = "65" name = "description"></textarea>
+            </div>
+            <br>
+            <div class="col-25"><br>
             <label>Others</label>
             Description : <br />
-         <textarea rows = "3" cols = "60" name = "description">
-         </textarea>
-        </div>
-    </fieldset>
+            <textarea style="border: 1px solid #ccc;" rows = "3" cols = "65" name = "description"></textarea>
+            </div>
+          </div>
 
-    </form>
-<div class="btn-holder">
-        <a href="{% url 'input3' %}"><input type="submit" value="NEXT"></a>
+        </div><br>
+        <input type="submit" value="Next" class="btn">
+      </form>
+    </div>
+  </div>
 
 </div>
+
 </body>
 </html>
