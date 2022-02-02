@@ -14,7 +14,7 @@ and common disorders among people.
 - Increased support to the health ministry to keep track of viral transmissible and commonly occuring diseases/disorders.<br />
 
 **Note:**<br />
-This project is still in development phase.
+- This project is still in development phase.
 
 **Future Works:**<br />
 - With seperate access to admin , hospitals and common public . 
