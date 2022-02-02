@@ -5,7 +5,7 @@ that can be updated periodically and accessed by URLs.<br />
 Real-time data of all the registered users is being used to analyze the health trends
 and common disorders among people.
 
-**Use**<br />
+**Use:**<br />
 - This e-health card can now be easily accessed with a UNIQUE HEALTH IDENITIFICATION CARD NUMBER ie., UHIC NUMBER .<br />
 - Easy consultation with doctors.<br />
 - Keep track of all diseases and disorders.<br />
