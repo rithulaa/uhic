@@ -6,7 +6,6 @@ Real-time data of all the registered users is being used to analyze the health t
 and common disorders among people.
 
 ***Use***
-
 -This e-health card can now be easily accessed with a UNIQUE HEALTH IDENITIFICATION CARD NUMBER ie., UHIC NUMBER .<br />
 -Easy consultation with doctors.<br />
 -Keep track of all diseases and disorders.<br />
@@ -14,10 +13,10 @@ and common disorders among people.
 -Over extensible usage of the application health trend of the population can be analyzed based on various age groups and disorders.<br />
 -Increased support to the health ministry to keep track of viral transmissible and commonly occuring diseases/disorders.<br />
 
-Note:
+**Note:**
 This project is still in development phase.
 
-Future Works:
+**Future Works:**
 -With seperate access to admin , hospitals and common public . 
 -Allowance and restriction of certain application features based on user category.
 -Insurance claim.
