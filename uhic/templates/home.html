@@ -226,20 +226,18 @@ position:relative;
   float: right;
   margin-left: 5px;
 }
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
+
 .active:after {
   content: "\2796";
 }
+
+
 </style>
 </head>
 
 <body>
-<img src='{%static "uhicblack.png" %}' width="500" height="150" class="center"/>
+<center><img src='{%static "uhicblack.png" %}' width="500" height="150"/></center>
+
   <div id="slider">
     <ul id="slideWrap">
       <form action="login">
@@ -253,10 +251,14 @@ position:relative;
       <button id="btn2">View</button></li>
       </form>
     </ul>
+
     <a id="prev" href="#">&#8810;</a>
     <a id="next" href="#">&#8811;</a>
+
   </div>
+  </form>
 <br><br>
+
  <div class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front">
@@ -290,7 +292,7 @@ position:relative;
   </div>
 </div>
 </div>
-<a href="mailto:email@example.com">Contact:Mail Us</a>
+<center><a href="mailto:email@example.com">Contact:Mail Us</a></center>
 <script>
 var responsiveSlider = function() {
 var slider = document.getElementById("slider");

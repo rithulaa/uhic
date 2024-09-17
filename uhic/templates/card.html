@@ -1,0 +1,48 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HEALTH CARD</title>
+    <style>
+        body {
+            background-image: url("{%static '8min.jpg' %}");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 1530px;
+        }
+        h5 {
+            font-family: Impact;
+            font-size: 35px;
+            color: black;
+        }
+        .center {
+              display: block;
+              margin-left: auto;
+              margin-right: auto;
+              width: 50%;
+        }
+        input[type="submit"]{
+            background-color: black;
+            color: white;
+            border-radius: 20px;
+            outline: white auto 5px;
+            padding: 10px;
+        }
+        .btn-holder {
+            justify-content: flex-end;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+<img src="{% static card.jpg%}" alt="logo" class="center"style="height: 200px" width="500px">
+<h5> YOUR CARD IS READY!!! </h5>
+<div class="btn-holder">
+    <input type="submit" value="Download">
+    <button type="submit" onclick="history.go(-2)" class="btn mt-3">Home</button>
+</div>
+</body>
+</html>
